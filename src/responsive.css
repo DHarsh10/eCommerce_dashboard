@@ -1,0 +1,239 @@
+/* @media screen and (max-width: 1366px) {
+    :root {
+        --font-size-130: 4.688vw ;
+        --line-height-130: 100px;
+        --font-size-30: 20.42px ;
+        --font-size-36: 28px ;
+    }
+
+    .home-btn{
+        width: 310px;
+        padding: 10px 5px;
+    }
+
+    .home-header{
+        margin-bottom: 80px;
+        margin-top: 78px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    :root {
+        --font-size-130: 80px ;
+        --line-height-130: 90px;
+        --font-size-30: 17.42px ;
+        --font-size-36: 25px ;
+    }
+
+    .home-btn{
+        width: 300px;
+        padding: 10px 5px;
+    }
+
+    .home-header{
+        margin-bottom: 80px;
+        margin-top: 78px;
+    }
+} */
+ 
+:root {
+  --header-height: 3rem;
+  --nav-width: 212px;
+  --nav-right-width: 280px;
+  --first-color: #111111;
+  --first-color-light: #AFA5D9;
+  --white-color: #F7F6FB;
+  --normal-font-size: 1rem;
+  --z-fixed: 100
+}
+ 
+.body-area {
+  position: relative;
+  margin: var(--header-height) 0 0 0;
+  padding: 0 1rem;
+  font-size: var(--normal-font-size);
+  transition: .3s
+}
+ 
+.header {
+  width: 100%;
+  height: var(--header-height);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  background-color: #fff;
+  border-bottom: 1px solid rgba(28, 28, 28, 0.2);
+  z-index: var(--z-fixed);
+  transition: .3s
+}
+ 
+.header_toggle {
+  color: var(--first-color);
+  font-size: 1.5rem;
+  cursor: pointer
+}
+ 
+.header_img {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden
+}
+ 
+.header_img img {
+  width: 40px
+}
+ 
+.l-navbar, .r-navbar {
+  position: fixed;
+  top: 0;
+  left: -30%;
+  height: 100vh;
+  background-color: #fff;
+  padding: .5rem 1rem 0 0;
+  transition: .3s;
+  z-index: var(--z-fixed);
+  width: 0;
+  padding: 0;
+}
+ 
+.nav {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden
+}
+ 
+.nav_logo,
+.nav_link {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  align-items: center;
+  column-gap: 1rem;
+  padding: .5rem 0 .5rem 1.5rem;
+  text-decoration: none;
+}
+ 
+.nav_logo {
+  margin-bottom: 2rem
+}
+ 
+.nav_logo-icon {
+  font-size: 1.25rem;
+  color: var(--white-color)
+}
+ 
+.nav_logo-name {
+  color: var(--white-color);
+  font-weight: 700
+}
+ 
+.nav_link {
+  position: relative;
+  color: var(--first-color-light);
+  margin-bottom: 1.5rem;
+  transition: .3s
+}
+ 
+.nav_link:hover {
+  color: var(--white-color)
+}
+ 
+.nav_icon {
+  font-size: 1.25rem
+}
+ 
+.show {
+  left: 0;
+  border-right: 1px solid rgba(28, 28, 28, 0.2);
+}
+
+.showRight{
+    right: 0;
+    border-left: 1px solid rgba(28, 28, 28, 0.2);
+}
+ 
+.body-pd {
+  transition: .3s;
+  padding-left: calc(var(--nav-width) + 1rem)
+}
+ 
+.active {
+  color: var(--white-color)
+}
+ 
+.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 2px;
+  height: 32px;
+  background-color: var(--white-color)
+}
+ 
+.height-100 {
+  height: 100vh
+}
+ 
+@media screen and (min-width: 768px) {
+  .body-area {
+    margin: calc(var(--header-height) + 1rem) 0 0 0;
+    padding-left: calc(var(--nav-width) - 150px)
+  }
+ 
+  .header {
+    height: calc(var(--header-height) + 1rem);
+    padding: 0 calc(var(--nav-width) - 150px);
+
+  }
+ 
+  .header_img {
+    width: 40px;
+    height: 40px
+  }
+ 
+  .header_img img {
+    width: 45px
+  }
+ 
+  .l-navbar {
+    left: 0;
+  }
+
+  .r-navbar{
+    right: 0;
+    left: unset;
+  }
+ 
+  .show {
+    width: calc(var(--nav-width));
+    padding: 1rem 1rem 0 0
+  }
+
+  .showRight{
+    width: calc(var(--nav-right-width));
+    padding: 1rem 0 0 1rem
+  }
+ 
+  .body-pd {
+    padding-left: calc(var(--nav-width) + 2rem)
+  }
+
+  .body-pd-right {
+    padding-right: calc(var(--nav-right-width) + 2rem)
+  }
+}
+
+
+.dark{
+    .show , .showRight, .header{
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+}

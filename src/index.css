@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root{
+  width: 100%;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --font-size-130: 6.667vw;
+  --line-height-130: 8.958vw;
+  --font-size-30: 1.584vw;
+  --font-size-36: 1.875vw ;
+}
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.App{
+  width: 100vw;
+  height: 100vh;
+}
+
+.homeWrapper{
+  background: url(./utils/assets/cover.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.home-header{
+  font-family: 'Sora';
+  font-weight: 800;
+  font-size: var(--font-size-130); 
+  line-height: var(--line-height-130);
+  margin-bottom: 148px;
+  margin-top: 98px;
+}
+
+.home-btn{
+  font-family: 'Space Mono';
+  background-color: #FFBB37;
+  font-size: var(--font-size-30);
+  width: 349px;
+  border-radius: 15px;
+  border: 1px solid black;
+  padding: 20px 5px;
+  z-index: 2;
+  position: relative;
+  text-align: center;
+}
+
+.org-name{
+  font-family: 'Space Mono';
+  font-size: var(--font-size-36);
+}
+
+.home-btn-container{
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  display: inline-block;
+}
+
+.home-btn-container span{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #555555;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 15px;
+}
+
+.navInput{
+    background-color:  #F3F3F3;
+    border-radius: 8px;
+    height: 30px;
+}
+
+.navInput input{
+  background-color:  #F3F3F3;
+  width: 140px;
+  
+}
+
+.navInput input:focus{
+  outline: none;
+}
+
+.navInput img{
+  width: 23px;
+}
+
+
+input::placeholder {
+  color: gray;
+  opacity: 1;
+}
+
+input::-moz-placeholder {
+  color: gray;
+  opacity: 1;
+}
+
+input:-ms-input-placeholder {
+  color: gray;
+}
