@@ -6,6 +6,7 @@ html,
 body,
 #root{
   width: 100%;
+  height: 100%;
   box-sizing: border-box;
 }
 body {
@@ -61,7 +62,9 @@ code {
   padding: 20px 5px;
   z-index: 2;
   position: relative;
+  color: #000;
   text-align: center;
+  text-decoration: none;
 }
 
 .org-name{
@@ -74,6 +77,7 @@ code {
   width: fit-content;
   height: fit-content;
   display: inline-block;
+  text-decoration: none;
 }
 
 .home-btn-container span{
@@ -89,7 +93,7 @@ code {
 .navInput{
     background-color:  #F3F3F3;
     border-radius: 8px;
-    height: 30px;
+    height: 2.083vw;
 }
 
 .navInput input{
@@ -103,20 +107,110 @@ code {
 }
 
 .navInput img{
-  width: 23px;
+  width: 1.5vw;
 }
 
-
-input::placeholder {
-  color: gray;
-  opacity: 1;
+.navInput img:last-child{
+  width: 1.6vw;
 }
 
-input::-moz-placeholder {
-  color: gray;
-  opacity: 1;
+.nav-url-md{
+  color: rgba(28, 28, 28, 0.4);
 }
 
-input:-ms-input-placeholder {
-  color: gray;
+.nav-url{
+  font-weight: 0.972vw;
+}
+
+.MuiTypography-root{
+  display: flex;
+}
+
+.MuiPaper-root{
+  border: none !important;
+}
+
+.MuiButtonBase-root{
+  background-color: #fff !important;
+  text-transform: capitalize !important;
+  font-size: 0.972vw !important;
+}
+
+.MuiAccordionDetails-root {
+  border: none !important;
+  padding-top: 0 !important; 
+  font-size: 0.972vw;
+}
+
+.MuiAccordionDetails-root li{
+  padding: 0.5rem 0;
+}
+
+.MuiAccordionDetails-root li a{
+  color: #000;
+  text-decoration: none;
+}
+
+.MuiTypography-root{
+  color: #000;
+  font-size: 0.972vw;
+}
+
+.MuiTypography-root ul{
+  padding-left: 2.3rem;
+  width: 100%;
+}
+
+.MuiSvgIcon-root, .MuiButtonBase-root{
+  color: rgba(28, 28, 28, 0.2) !important;
+}
+
+.error{
+  padding: 2rem;
+}
+
+.css-1usuzwp-MuiButtonBase-root-MuiTab-root.Mui-selected{
+  border-bottom: none !important;
+  color: rgba(28, 28, 28, 0.4) !important;
+}
+
+.menu-l-tab-content {
+  list-style: revert; 
+  padding-left: 1rem;
+}
+.menu-l-tab-content li{
+  font-size: 0.972vw;
+}
+.menu-l-tab-content li::marker{
+  color: rgba(28, 28, 28, 0.2);
+}
+
+.css-1gsv261{
+  border-bottom: none !important;
+}
+
+.MuiBox-root {
+  padding-top: 0 !important;
+}
+
+.css-rizt0-MuiTypography-root, .profileName{
+  font-size: 0.972vw !important;
+}
+
+.semiWhite{
+  color: rgba(28, 28, 28, 0.4);
+}
+
+.mlAfter{
+  position: relative;
+}
+
+.mlAfter::after{
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 15px;
+  bottom: -1px;
+  left: 0.8vw;
+  background-color: rgba(28, 28, 28, 0.1);
 }

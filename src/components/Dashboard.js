@@ -28,11 +28,11 @@ const Dashboard = () => {
   }
   return (
         <ThemeProvider  value={{theme, setDarkTheme, setLightTheme}}>
-            <div className={`body-area${showNav ? ' body-pd' : '' }${showRightNav ? ' body-pd-right' : ''}`}>
+            <div className={`body-area${showNav ? ' body-pd' : '' }${showRightNav ? ' body-pd-right' : ''} dashboard-wrapper`}>
                 <NavBar {...{ showNav, setShowNav, showRightNav, setShowRightNav, btnFn }} />
                 <LeftMenu showNav={showNav}/>
                 <RightMenu showRightNav={showRightNav}/>
-                <div className="pt-4 pb-4 dark:bg-[#1C1C1C] dashboardBody">
+                <div className="pt-14 pb-4 dark:bg-[#1C1C1C] dashboardBody">
                     <Outlet/>
                 </div>
             </div>

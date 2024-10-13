@@ -8,7 +8,7 @@ const Error = () => {
     console.log(err);
     console.log(err)
   return (
-    <div>
+    <div className='error'>
         <h1>oops!!</h1>
         <h2>Something went wrong</h2>
 

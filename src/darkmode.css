@@ -2,4 +2,29 @@
     .dashboardBody{
         color: #fff;
     }
+    .nav-url, .MuiAccordionDetails-root li a, .MuiTypography-root, .profileName,.error, .menu-l-tab-content li, .activitiesEl, .notifcationEl, .contactEl{
+        color: #fff;
+    }
+    .nav-url-md{
+        color: rgba(255, 255, 255, 0.4);
+    }
+
+    .show , .showRight, .header{
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+    .MuiButtonBase-root, .MuiAccordionDetails-root{
+        background-color: #1C1C1C !important;
+    }
+
+    .MuiSvgIcon-root, .MuiButtonBase-root, .menu-l-tab-content li::marker{
+        color: rgba(255, 255, 255, 0.2) !important;
+    }
+    .menu-acc-header, .css-1usuzwp-MuiButtonBase-root-MuiTab-root.Mui-selected, .activitiesEl small, .notifcationEl small {
+        color: rgba(255, 255, 255, 0.4) !important;
+    }
+    .mlAfter::after{
+        background-color: rgba(255, 255, 255, 0.2) !important;
+    }
+    
+    
 }

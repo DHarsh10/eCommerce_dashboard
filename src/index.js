@@ -11,6 +11,9 @@ import Dashboard from './components/Dashboard';
 import Error from './components/Error';
 import Default from './components/Default';
 import Orderlist from './components/Orderlist';
+import Reports from './components/Reports';
+import Overview from './components/Overview';
+import Details from './components/Details';
 
 
 const appRouter = createBrowserRouter([
@@ -31,6 +34,18 @@ const appRouter = createBrowserRouter([
       {
         path: "orderlist",
         element: <Orderlist/>
+      },
+      {
+        path: "details",
+        element: <Details/>
+      },
+      {
+        path: "overview",
+        element: <Overview/>
+      },
+      {
+        path: "reports",
+        element: <Reports/>
       },
       
     ]
