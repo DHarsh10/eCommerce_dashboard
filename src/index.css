@@ -396,3 +396,62 @@ li .activeMenu{
   padding: 0 !important;
 }
 
+
+.complete{
+  color: #4AA785;
+  position: relative;
+}
+
+.complete::before{
+  background-color: #4AA785;
+  border-radius: 10px;
+}
+
+.pending{
+  color: #59A8D4;
+  position: relative;
+}
+
+.pending::before{
+  background-color: #59A8D4;
+  border-radius: 10px;
+}
+
+.approved{
+  color: #FFC555;
+  position: relative;
+}
+.approved::before{
+  background-color: #FFC555;
+  border-radius: 10px;
+}
+
+.rejected{
+  color: rgba(28, 28, 28, 0.4);
+  position: relative;
+}
+.rejected::before{
+  background-color: rgba(28, 28, 28, 0.4);
+  border-radius: 10px;
+}
+
+.inprogress{
+  color: #8A8CD9;
+  position: relative;
+}
+.inprogress::before{
+  background-color: #8A8CD9;
+  border-radius: 10px;
+}
+
+.complete::before, .pending::before, .approved::before, .rejected::before, .inprogress::before{
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 6px;
+  height: 6px;
+}
+

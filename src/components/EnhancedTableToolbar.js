@@ -3,9 +3,12 @@ import Toolbar from "@mui/material/Toolbar";
 import Tooltip from "@mui/material/Tooltip";
 import IconButton from "@mui/material/IconButton";
 import SvgIcon from "@mui/material/SvgIcon";
-import { search } from "../utils/assets/svgs";
+import { search, searchDark } from "../utils/assets/svgs";
+import useTheme from "../contexts/themeContext";
 
 function EnhancedTableToolbar() {
+  const {theme} = useTheme();
+  const searchSrc = theme === 'light' ? search : searchDark
   return (
     <div className="flex items-center justify-between table-toolbar">
         <Toolbar sx={{ gap: "0.5rem" }}>
@@ -77,7 +80,7 @@ function EnhancedTableToolbar() {
       </Tooltip>
     </Toolbar>
     <div className='me-4 flex navInput'>
-        <img src={search} alt="" className='ps-2'/>
+        <img src={searchSrc} alt="" className='ps-2'/>
         <input type="text" className='text-sm px-2 ' placeholder='Search'/>
     </div>
     </div>

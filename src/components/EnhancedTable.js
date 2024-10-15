@@ -22,21 +22,21 @@ import {
 } from '../utils/assets/svgs/index'
 
 const rows = [
-    { orderId : '#CM9801', userName: "Natali Craig", project: "Landing Page", address: "Nest Lane Olivette", date: "Yesterday", status: 'submitted', userImg: actAvatar1 },
-    { orderId : '#CM9802', userName: "Andi Lane", project: "CRM Admin pages", address: "Bagwell Avenue Ocala", date: "1 hour ago", status: 'submitted', userImg: actAvatar2 },
-    { orderId : '#CM9803', userName: "Orlando Diggs", project: "Client Project", address: "Larry San Francisco", date: "A minute ago", status: 'submitted', userImg: actAvatar3 },
-    { orderId : '#CM9804', userName: "Drew Cano", project: "Admin Dashboard", address: "Meadow Lane Oakland", date: "Just now", status: 'submitted', userImg: actAvatar4 },
-    { orderId : '#CM9805', userName: "Kate Morrison", project: "App Landing Page", address: "Bagwell Avenue Ocala", date: "Yesterday", status: 'submitted', userImg: actAvatar5 },
-    { orderId : '#CM9806', userName: "Natali Craig", project: "Admin Dashboard", address: "Larry San Francisco", date: "A minute ago", status: 'submitted', userImg: actAvatar4 },
-    { orderId : '#CM9807', userName: "Orlando Diggs", project: "Landing Page", address: "Nest Lane Olivette", date: "1 hour ago", status: 'submitted', userImg: actAvatar3 },
-    { orderId : '#CM9808', userName: "Drew Cano", project: "Admin Dashboard", address: "Larry San Francisco", date: "Just now", status: 'submitted', userImg: actAvatar2 },
-    { orderId : '#CM9809', userName: "Kate Morrison", project: "Client Project", address: "Meadow Lane Oakland", date: "Yesterday", status: 'submitted', userImg: actAvatar1 },
-    { orderId : '#CM98010', userName: "Andi Lane", project: "Client Project", address: "Bagwell Avenue Ocala", date: "Just now", status: 'submitted', userImg: actAvatar5 },
-    { orderId : '#CM98011', userName: "Orlando Diggs", project: "Landing Page", address: "Nest Lane Olivette", date: "A minute ago", status: 'submitted', userImg: actAvatar2 },
-    { orderId : '#CM98012', userName: "Kate Morrison", project: "Admin Dashboard", address: "Meadow Lane Oakland", date:"1 hour ago", status: 'submitted', userImg: actAvatar4 },
-    { orderId : '#CM98013', userName: "Drew Cano", project: "Client Project", address: "Nest Lane Olivette", date: "Yesterday", status: 'submitted', userImg: actAvatar5 },
-    { orderId : '#CM98014', userName: "Andi Lane", project: "Landing Page", address: "Bagwell Avenue Ocala", date: "Just now", status: 'submitted', userImg: actAvatar1 },
-    { orderId : '#CM98015', userName: "Orlando Diggs", project: "Client Project", address: "Meadow Lane Oakland", date: "A minute ago", status: 'submitted', userImg: actAvatar3 },
+    { orderId : '#CM9801', userName: "Natali Craig", project: "Landing Page", address: "Nest Lane Olivette", date: "Yesterday", status: 'Complete', userImg: actAvatar1, statusClr: 'complete' },
+    { orderId : '#CM9802', userName: "Andi Lane", project: "CRM Admin pages", address: "Bagwell Avenue Ocala", date: "1 hour ago", status: 'Pending', userImg: actAvatar2 , statusClr: 'pending'},
+    { orderId : '#CM9803', userName: "Orlando Diggs", project: "Client Project", address: "Larry San Francisco", date: "A minute ago", status: 'Approved', userImg: actAvatar3 , statusClr: 'approved'},
+    { orderId : '#CM9804', userName: "Drew Cano", project: "Admin Dashboard", address: "Meadow Lane Oakland", date: "Just now", status: 'Rejected', userImg: actAvatar4, statusClr: 'rejected' },
+    { orderId : '#CM9805', userName: "Kate Morrison", project: "App Landing Page", address: "Bagwell Avenue Ocala", date: "Yesterday", status: 'In Progress', userImg: actAvatar5, statusClr: 'inprogress' },
+    { orderId : '#CM9806', userName: "Natali Craig", project: "Admin Dashboard", address: "Larry San Francisco", date: "A minute ago", status: 'Approved', userImg: actAvatar4, statusClr: 'approved' },
+    { orderId : '#CM9807', userName: "Orlando Diggs", project: "Landing Page", address: "Nest Lane Olivette", date: "1 hour ago", status: 'Rejected', userImg: actAvatar3, statusClr: 'rejected'},
+    { orderId : '#CM9808', userName: "Drew Cano", project: "Admin Dashboard", address: "Larry San Francisco", date: "Just now", status: 'In Progress', userImg: actAvatar2, statusClr: 'inprogress' },
+    { orderId : '#CM9809', userName: "Kate Morrison", project: "Client Project", address: "Meadow Lane Oakland", date: "Yesterday", status: 'Pending', userImg: actAvatar1, statusClr: 'pending' },
+    { orderId : '#CM98010', userName: "Andi Lane", project: "Client Project", address: "Bagwell Avenue Ocala", date: "Just now", status: 'Complete', userImg: actAvatar5, statusClr: 'complete' },
+    { orderId : '#CM98011', userName: "Orlando Diggs", project: "Landing Page", address: "Nest Lane Olivette", date: "A minute ago", status: 'submitted', userImg: actAvatar2, statusClr: 'submitted' },
+    { orderId : '#CM98012', userName: "Kate Morrison", project: "Admin Dashboard", address: "Meadow Lane Oakland", date:"1 hour ago", status: 'Rejected', userImg: actAvatar4, statusClr: 'rejected' },
+    { orderId : '#CM98013', userName: "Drew Cano", project: "Client Project", address: "Nest Lane Olivette", date: "Yesterday", status: 'submitted', userImg: actAvatar5, statusClr: 'submitted' },
+    { orderId : '#CM98014', userName: "Andi Lane", project: "Landing Page", address: "Bagwell Avenue Ocala", date: "Just now", status: 'In Progress', userImg: actAvatar1, statusClr: 'inprogress' },
+    { orderId : '#CM98015', userName: "Orlando Diggs", project: "Client Project", address: "Meadow Lane Oakland", date: "A minute ago", status: 'Approved', userImg: actAvatar3, statusClr: 'approved' },
 ];
 
 function EnhancedTable() {
@@ -50,6 +50,7 @@ const rowsPerPage = 6
 
   const { theme } = useTheme();
   const currentTheme = theme === "light";
+  // 
 
   const handleRequestSort = (event, property) => {
     const isAsc = orderBy === property && order === "asc";
@@ -105,6 +106,7 @@ const rowsPerPage = 6
             onRequestSort={handleRequestSort}
             rowCount={rows.length}
           />
+
           <TableBody>
             {rows
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
@@ -138,7 +140,7 @@ const rowsPerPage = 6
                     <TableCell align="left">{row.project}</TableCell>
                     <TableCell align="left">{row.address}</TableCell>
                     <TableCell align="left"><div className="flex items-center gap-2"><span><img src={currentTheme ? CalendarBlank : CalendarBlankDark } alt="" className="w-[1.111vw]"/></span><span>{row.date}</span></div></TableCell>
-                    <TableCell align="left">{row.status}</TableCell>
+                    <TableCell align="left" ><span className={row.statusClr}>{row.status}</span></TableCell>
                   </TableRow>
                 );
               })}

@@ -10,7 +10,9 @@ import sun from '../images/svg/navbar/sun.svg';
 import clock from '../images/svg/navbar/clock.svg';
 import bell from '../images/svg/navbar/bell.svg';
 import search from '../images/svg/search.svg';
+import searchDark from '../images/svg/searchDark.svg';
 import text from '../images/svg/text.svg';
+import textDark from '../images/svg/textDark.svg';
 import iconSet from '../images/svg/leftMenu/iconSet.svg';
 
 
@@ -129,5 +131,8 @@ export {
   revenueChartDark,
 
   CalendarBlankDark,
-  CalendarBlank
+  CalendarBlank,
+
+  textDark,
+  searchDark
 };

@@ -1,5 +1,5 @@
 import React from 'react'
-import { clockDark, bellDark, sidebarDark, sunDark, starDark, sidebar, star, sun, clock, bell, search, text } from '../utils/assets/svgs'
+import { clockDark, bellDark, sidebarDark, sunDark, starDark, sidebar, star, sun, clock, bell, search, text, searchDark, textDark } from '../utils/assets/svgs'
 import useTheme from '../contexts/themeContext';
 import Breadcrumb from './Breadcrumb';
 import { useState, useEffect } from 'react';
@@ -17,6 +17,8 @@ const NavBar = ({ showNav, setShowNav, showRightNav, setShowRightNav, btnFn }) =
     sun: theme === 'light' ? sun : sunDark,
     clock: theme === 'light' ? clock : clockDark,
     bell: theme === 'light' ? bell : bellDark,
+    searchSrc: theme === 'light' ? search : searchDark,
+    textSrc: theme === 'light' ? text : textDark,
   };
 
 //   const pathname = window.location.pathname;
@@ -38,9 +40,9 @@ const NavBar = ({ showNav, setShowNav, showRightNav, setShowRightNav, btnFn }) =
 
         <div className='flex items-center'>
             <div className='me-4 flex navInput'>
-                <img src={search} alt="" className='ps-2'/>
+                <img src={themeIcons.searchSrc} alt="" className='ps-2'/>
                 <input type="text" className='text-sm px-2 ' placeholder='Search'/>
-                <img src={text} alt="" className='pe-2' />
+                <img src={themeIcons.textSrc} alt="" className='pe-2' />
             </div>
             <img src={themeIcons.sun} alt="" className='pe-4 cursor-pointer' onClick={btnFn}/>
             <img src={themeIcons.clock} alt="" className='pe-4 cursor-pointer'/>

@@ -86,4 +86,20 @@
       .activeMenu .MuiButtonBase-root, li .activeMenu{
         background-color: rgba(255, 255, 255, 0.1) !important;
       }
+
+      .rejected{
+        color: rgba(255, 255, 255, 0.4);
+      }
+      .rejected::before{
+        background-color: rgba(255, 255, 255, 0.4);
+      }
+
+      .navInput input, .navInput, .navInput img{
+        background-color: rgba(255, 255, 255, 0.05);
+      }
+
+      .navInput img:first-child{
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+      }
 }
