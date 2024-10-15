@@ -62,7 +62,7 @@ code {
   padding: 20px 5px;
   z-index: 2;
   position: relative;
-  color: #000;
+  color: #1C1C1C;
   text-align: center;
   text-decoration: none;
 }
@@ -143,16 +143,20 @@ code {
 }
 
 .MuiAccordionDetails-root li{
-  padding: 0.5rem 0;
+  /* padding: 0.5rem 0; */
 }
 
 .MuiAccordionDetails-root li a{
-  color: #000;
+  color: #1C1C1C;
   text-decoration: none;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem 0;
+  display: inline-block;
 }
 
 .MuiTypography-root{
-  color: #000;
+  color: #1C1C1C;
   font-size: 0.972vw;
 }
 
@@ -213,4 +217,181 @@ code {
   bottom: -1px;
   left: 0.8vw;
   background-color: rgba(28, 28, 28, 0.1);
+}
+
+.orders-data{
+  display: flex;
+  gap: 4%;
+  flex-wrap: wrap;
+  color: #1C1C1C;
+}
+
+.orders-data > div{
+  width: 48%;
+  border-radius: 16px;
+}
+
+.orders-data1{
+  background-color: #E3F5FF;
+  margin-bottom: 4%;
+}
+.orders-data2{
+  background-color: #F7F9FB;
+  margin-bottom: 4%;
+}
+.orders-data3{
+  background-color: #F7F9FB;
+}
+.orders-data4{
+  background-color: #E5ECF6;
+}
+
+.MuiPaper-root{
+  --Paper-shadow: none !important;
+}
+
+.LocationRevenue, .ProjectionsActuals, .MuiPaper-root, .revenueChart, .prodTable, .pieBlock{
+  background-color: #F7F9FB;
+  border-radius: 16px;
+  color: #1C1C1C;
+  height: 100%;
+}
+
+.MuiLinearProgress-root::before{
+  background: #A8C5DA !important;
+}
+
+.MuiTableCell-root{
+  background-color: #F7F9FB;
+  font-size: 0.972vw;
+  color: #1C1C1C;
+}
+
+.p-hght{
+  height: auto;
+}
+
+.MuiBox-root{
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.MuiStack-root{
+  justify-content: center;
+}
+.pieLabelList li{
+  position: relative;
+  font-size: 0.833vw;
+  margin-bottom: 1rem;
+}
+.pieLabelList li::before, .graphAbb::before{
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 10px;
+  top: 0;
+  left: -1rem;
+  bottom: 0;
+  margin: auto;
+}
+.lab-1::before{
+  background-color: #95A4FC;
+}
+.lab-2::before{
+  background-color: #C6C7F8;
+}
+.lab-3::before{
+  background-color: #BAEDBD;
+}
+.lab-4::before{
+  background-color: #B1E3FF;
+}
+
+.rightBorder, .graphAbb {
+  position: relative;
+}
+
+.rightBorder::after{
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 110%;
+  background-color: rgba(28, 28, 28, 0.2);
+  right: -2rem;
+}
+
+.graphAbb1::before{
+  background-color: #1C1C1C;
+}
+
+.graphAbb2::before{
+  background-color: #A8C5DA;
+}
+
+.MuiTableCell-root{
+  background-color: #fff;
+}
+
+.table-toolbar, .MuiIconButton-root, .Mui-disabled .MuiIconButton-root{
+  background-color: #F7F9FB !important;
+}
+
+.table-toolbar input{
+  width: 160px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.MuiPaginationItem-root, .MuiPaginationItem-icon{
+  color: #1C1C1C !important;
+}
+.Mui-selected{
+  background-color: rgba(28, 28, 28, 0.05) !important;
+  border-radius: 8px;
+}
+
+.dashboardTable td{
+  font-size: 0.972vw;
+}
+
+/* active menu item */
+.activeMenu .MuiButtonBase-root, li .activeMenu{
+  background-color: rgba(28, 28, 28, 0.05) !important;
+  padding: 0;
+  border-radius: 8px;
+  position: relative;
+}
+li .activeMenu{
+  padding: 0.5rem 0.5rem !important;
+}
+
+
+
+.activeMenu .MuiButtonBase-root::before, li .activeMenu::before{
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 50%;
+  background-color: #1C1C1C;
+  left: -1px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.l-navbar .MuiButtonBase-root{
+  margin-right: 0.5rem;
+}
+
+.l-nav-menu-item:hover, .l-nav-menu-item .MuiButtonBase-root:hover{
+  background-color: rgba(28, 28, 28, 0.05) !important;
+  border-radius: 8px;
+  padding: 0.5rem 0.5rem !important;
+  transition: 0.3s;
+}
+
+.l-nav-menu-item .MuiButtonBase-root:hover{
+  padding: 0 !important;
 }

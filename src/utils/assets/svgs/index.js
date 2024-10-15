@@ -54,6 +54,21 @@ import notificationIcon1 from '../images/svg/rightMenu/notificationIcon1.svg';
 import notificationIcon2 from '../images/svg/rightMenu/notificationIcon2.svg';
 import notificationIcon3 from '../images/svg/rightMenu/notificationIcon3.svg';
 
+//default Icons
+import stonksUp from '../images/svg/default/stonksUp.svg';
+import stonksDown from '../images/svg/default/stonksDown.svg';
+import stonksUpDark from '../images/svg/default/stonksUpDark.svg';
+import stonksDownDark from '../images/svg/default/stonksDownDark.svg';
+
+import worldMap from '../images/svg/default/worldMap.svg';
+import worldMapDark from '../images/svg/default/worldMapDark.svg';
+
+import revenueChart from '../images/svg/default/revenueChart.svg';
+import revenueChartDark from '../images/svg/default/revenueChartDark.svg';
+
+import CalendarBlank from '../images/svg/CalendarBlank.svg';
+import CalendarBlankDark from '../images/svg/CalendarBlankDark.svg';
+
 export {
   clockDark,
   bellDark,
@@ -102,5 +117,17 @@ export {
   cntAvatar6,
   notificationIcon1,
   notificationIcon2,
-  notificationIcon3
+  notificationIcon3,
+
+  stonksUp,
+  stonksDown,
+  stonksUpDark,
+  stonksDownDark,
+  worldMap,
+  worldMapDark,
+  revenueChart,
+  revenueChartDark,
+
+  CalendarBlankDark,
+  CalendarBlank
 };

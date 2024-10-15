@@ -219,7 +219,8 @@
  
   .show {
     width: calc(var(--nav-width));
-    padding: 0rem 0rem 0 1.5rem;
+    padding: 0rem 00rem 0 1.5rem;
+    margin-right: 0.5rem;
   }
 
   .showRight{

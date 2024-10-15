@@ -1,8 +1,9 @@
 import React from 'react'
+import EnhancedTable from './EnhancedTable'
 
 const Orderlist = () => {
   return (
-    <div>Orderlist</div>
+    <div><EnhancedTable/></div>
   )
 }
 

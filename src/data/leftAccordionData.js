@@ -22,7 +22,8 @@ import {
 export const accordionData = [{
         title: {
             name: 'Default',
-            img: [defaultIcon, defaultIconDark]
+            img: [defaultIcon, defaultIconDark],
+            link: '/dashboard'
         }
     },
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { styled } from '@mui/material/styles';
 import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
 import MuiAccordion from '@mui/material/Accordion';
@@ -42,7 +42,19 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 }));
 
 const AccordionItem = ({ title, items, isExpanded, handleChange, panelId, imgSrc }) => {
+  const [activeLink, setActiveLink] = useState('/dashboard');  
   const hasItems = items && items.length > 0;
+
+  // Handle link click and set the active link
+  const handleLinkClick = (link) => {
+    setActiveLink(link);
+    console.log(link)
+    if(link !== "/dashboard"){
+        document.querySelector(".defBtn").classList.remove("activeMenu");
+    }else{
+        document.querySelector(".defBtn").classList.add("activeMenu");
+    }
+  };
 
   return (
     <Accordion expanded={isExpanded} onChange={handleChange(panelId, hasItems)}>
@@ -51,6 +63,7 @@ const AccordionItem = ({ title, items, isExpanded, handleChange, panelId, imgSrc
           aria-controls={`${panelId}d-content`}
           id={`${panelId}d-header`}
           hasItems={hasItems}
+            
         >
           <Typography>
             <img src={imgSrc} alt="icon" style={{ marginRight: '10px' }} />
@@ -58,7 +71,12 @@ const AccordionItem = ({ title, items, isExpanded, handleChange, panelId, imgSrc
           </Typography>
         </AccordionSummary>
       ) : (
-        <Link to={title.link} style={{ textDecoration: 'none', color: 'inherit' }}>
+        <Link
+          to={title.link}
+          style={{ textDecoration: 'none', color: 'inherit' }}
+          className={`${activeLink === title.link ? 'activeMenu' : ''} defBtn l-nav-menu-item`} 
+          onClick={() => handleLinkClick(title.link)}  
+        >
           <AccordionSummary
             aria-controls={`${panelId}d-content`}
             id={`${panelId}d-header`}
@@ -77,7 +95,13 @@ const AccordionItem = ({ title, items, isExpanded, handleChange, panelId, imgSrc
             <ul>
               {items.map(({ name, link }, itemIndex) => (
                 <li key={itemIndex}>
-                  <Link to={link}>{name}</Link>
+                  <Link
+                    to={link}
+                    className={activeLink === link ? 'activeMenu' : ''}  
+                    onClick={() => handleLinkClick(link)}  
+                  >
+                    {name}
+                  </Link>
                 </li>
               ))}
             </ul>

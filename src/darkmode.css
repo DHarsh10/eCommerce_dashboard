@@ -2,7 +2,7 @@
     .dashboardBody{
         color: #fff;
     }
-    .nav-url, .MuiAccordionDetails-root li a, .MuiTypography-root, .profileName,.error, .menu-l-tab-content li, .activitiesEl, .notifcationEl, .contactEl{
+    .nav-url, .MuiAccordionDetails-root li a, .MuiTypography-root, .profileName,.error, .menu-l-tab-content li, .activitiesEl, .notifcationEl, .contactEl, .MuiTableCell-root{
         color: #fff;
     }
     .nav-url-md{
@@ -12,7 +12,7 @@
     .show , .showRight, .header{
         border-color: rgba(255, 255, 255, 0.1);
     }
-    .MuiButtonBase-root, .MuiAccordionDetails-root{
+    .MuiButtonBase-root, .MuiAccordionDetails-root, .MuiPaper-root{
         background-color: #1C1C1C !important;
     }
 
@@ -26,5 +26,64 @@
         background-color: rgba(255, 255, 255, 0.2) !important;
     }
     
+    .orders-data2, .orders-data3, .LocationRevenue, .ProjectionsActuals,.revenueChart, .prodTable, .MuiPaper-root, .MuiTableCell-root, .pieBlock{
+        background-color: rgba(255, 255, 255, 0.05);
+        color: #fff;
+    }
+    .lab-2::before{
+        background-color: #C6C7F8;
+    }
+
+    .graphAbb1::before{
+    background-color: #A8C5DA;
+    }
     
+    .graphAbb2::before{
+    background-color: #C6C7F8;
+    }
+
+    .rightBorder::after{
+    background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .MuiChartsAxis-line, .MuiChartsAxis-tick, .MuiChartsAxis-label{
+    stroke: rgba(255, 255, 255, 0.4) !important;
+    }
+
+    .MuiChartsAxis-tickLabel tspan{
+    stroke: rgba(255, 255, 255, 0.4) !important;
+    font-weight: 100;
+    }
+
+    .table-toolbar, .dashboardTable th, .table-toolbar{
+        background-color: rgba(255, 255, 255, 0.05) !important;
+    }
+
+    .dashboardTable th, .dashboardTable td, .ordersTableHead th{
+        background-color: #1C1C1C !important;
+    }
+
+    .table-toolbar .MuiSvgIcon-root path{
+        fill: #fff !important;
+    }
+
+    .pagination-table .Mui-selected{
+        background-color: rgba(255, 255, 255, 0.05) !important;
+    }
+   
+
+    .MuiPaginationItem-root, .MuiPaginationItem-icon{
+        color: #fff !important;
+      }
+
+      .MuiIconButton-root {
+        background: rgba(28, 28, 28, 0.02) !important;
+      }
+
+      .activeMenu .MuiButtonBase-root::before, li .activeMenu::before{
+        background-color: #C6C7F8;
+      }
+      .activeMenu .MuiButtonBase-root, li .activeMenu{
+        background-color: rgba(255, 255, 255, 0.1) !important;
+      }
 }
