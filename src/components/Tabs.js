@@ -70,6 +70,6 @@ export default function BasicTabs() {
           <li>Overview</li>
         </ul>
       </CustomTabPanel>
-    </Box>
+    </Box> 
   );
 }
