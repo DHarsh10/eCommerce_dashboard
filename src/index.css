@@ -329,7 +329,7 @@ code {
   background-color: #A8C5DA;
 }
 
-.MuiTableCell-root{
+.dashboardTable .MuiTableCell-root, .ordersTableHead .MuiTableCell-root{
   background-color: #fff;
 }
 
