@@ -38,11 +38,7 @@ using the command: npm install
 using the command: npm run build
 
 
-
 Build Link: https://dev-dashboard-ui.netlify.app/
 GithubLink: https://github.com/DHarsh10/eCommerce_dashboard/tree/master
 
-
 Note: Due to time constraints, some design elements were left unfinished, and I couldn't fully focus on implementing the dark mode interactivity or ensuring the dashboard's responsiveness according to best practices.
-
-
