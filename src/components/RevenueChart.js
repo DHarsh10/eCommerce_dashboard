@@ -1,9 +1,6 @@
 import React from 'react';
 import useTheme from '../contexts/themeContext';
-import { revenueChart, revenueChartDark } from "../utils/assets/svgs/index";
 import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
-import MenuItem from '@mui/material/MenuItem';
 import { ResponsiveChartContainer } from '@mui/x-charts/ResponsiveChartContainer';
 import { BarPlot } from '@mui/x-charts/BarChart';
 import { LinePlot } from '@mui/x-charts/LineChart';
@@ -13,7 +10,8 @@ import { ChartsYAxis } from '@mui/x-charts/ChartsYAxis';
 const RevenueChart = () => {
   const { theme } = useTheme();
   const currentTheme = theme === "light";
-  const [type, setType] = React.useState('line');
+//   const [type, setType] = React.useState('line');
+const type = "line"
 
   // Define custom colors based on the current theme
   const lineColors = {

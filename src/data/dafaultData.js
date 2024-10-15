@@ -1,4 +1,3 @@
-import { Percent } from "@mui/icons-material"
 import {
     stonksUp,
     stonksDown,

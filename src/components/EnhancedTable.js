@@ -39,24 +39,14 @@ const rows = [
     { orderId : '#CM98015', userName: "Orlando Diggs", project: "Client Project", address: "Meadow Lane Oakland", date: "A minute ago", status: 'submitted', userImg: actAvatar3 },
 ];
 
-function descendingComparator(a, b, orderBy) {
-  if (b[orderBy] < a[orderBy]) return -1;
-  if (b[orderBy] > a[orderBy]) return 1;
-  return 0;
-}
-
-function getComparator(order, orderBy) {
-  return order === "desc"
-    ? (a, b) => descendingComparator(a, b, orderBy)
-    : (a, b) => -descendingComparator(a, b, orderBy);
-}
-
 function EnhancedTable() {
   const [order, setOrder] = React.useState("asc");
   const [orderBy, setOrderBy] = React.useState("userName");
   const [selected, setSelected] = React.useState([]);
   const [page, setPage] = React.useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState(6);
+//   const [rowsPerPage, setRowsPerPage] = React.useState(6);
+
+const rowsPerPage = 6
 
   const { theme } = useTheme();
   const currentTheme = theme === "light";
